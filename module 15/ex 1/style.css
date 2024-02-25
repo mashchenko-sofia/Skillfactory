@@ -1,0 +1,13 @@
+
+.icon-1:before {
+    content: url('./Arrow\ Down\ Left\ Circle.svg');
+    /* width: 20px;
+    height: 20px; */
+}
+.icon-2:before {
+    content: url('./Arrow\ Down\ Left\ Circle\ Fill.svg');
+    /* width: 20px;
+    height: 20px; */
+} 
+
+

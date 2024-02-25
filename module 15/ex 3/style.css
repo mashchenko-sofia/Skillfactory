@@ -1,0 +1,59 @@
+@import url(./reset.css);
+
+:root {
+    --mainColor: #b7dcf1;
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    margin: 3% auto;
+    padding: 2%;
+
+    width: 90vw;
+    height: 90vh;
+    min-width: 430px;
+
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
+}
+
+.chatbox__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.chatbox__label {
+    padding: 5px 5px 0 0;
+    border: 3px solid var(--mainColor);
+}
+.button {
+    padding: 10px 20px;
+    background-color: var(--mainColor);
+}
+.chat {
+    padding: 25px 5px;
+    height: 90%;
+    
+    border: 3px solid var(--mainColor);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+.message {
+    margin: 20px 0;
+    padding: 10px 20px;
+    border: 3px solid var(--mainColor);
+    border-radius: 10px;
+}
+.send-message {
+    float: right;
+    clear: both;
+}
+.recieved-message{
+    float: left;
+    clear: both;
+}
