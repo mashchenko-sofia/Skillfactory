@@ -13,10 +13,18 @@ webSocket.onclose = function() {console.log('Disconnected from server')};
 
 const btnSent = document.getElementById('btn-sent');
 btnSent.addEventListener('click', () => {
-    const messageText = document.getElementById('chatbox__input').value;
-    createMessage(messageText, 'send-message');
+    const messageInput = document.getElementById('chatbox__input');
+    const messageText = messageInput.value.trim();
+
+    if (messageText !== '') {
+        createMessage(messageText, 'send-message');
+        webSocket.send(messageText);
+        messageInput.value = '';
+    } else {
+        console.log('Сообщение не может быть пустым');
+        alert('Сообщение не может быть пустым');
+    }
     
-    webSocket.send(messageText);
 });
 
 const btnGeo = document.getElementById('btn-geo');
